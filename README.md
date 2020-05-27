@@ -19,8 +19,8 @@ npm run build
 ```
 
 ```
-Шаблоны компонентов: src/blocks/"block"/template.js
-Так же все блоки находятся в файле index_template.html
+Шаблоны блоков: src/blocks/"block"/template.js
+Так же все блоки находятся на странице index_template.html
 
 http://localhost:3000/
 
