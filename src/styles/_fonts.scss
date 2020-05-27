@@ -1,0 +1,21 @@
+@import "utils";
+
+@font-face {
+  @include font-face('Proxima Nova', 'ProximaNovaLight', 200, normal);
+}
+
+@font-face {
+  @include font-face('Proxima Nova', 'ProximaNovaBold', 800, normal);
+}
+
+@font-face {
+  @include font-face('Proxima Nova', 'ProximaNovaExtrabold', 900, normal);
+}
+
+@font-face {
+  @include font-face('Houschka Pro', 'HouschkaPro-Light', 300, normal);
+}
+
+@font-face {
+  @include font-face('Houschka Pro', 'HouschkaPro-DemiBold', 800, normal);
+}

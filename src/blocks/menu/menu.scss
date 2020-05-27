@@ -1,0 +1,150 @@
+.menu {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: $black;
+  color: $white;
+  z-index: map_get($z-index, burger-menu);
+  overflow: hidden;
+  transform: translateY(-100%);
+  transition: transform 0.4s ease;
+
+  &_show {
+    transform: translateY(0);
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__navigation {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto 80px;
+    padding: 250px 12.5% 0;
+
+    @include breakpoint(lg) {
+      margin: 0 auto 70px;
+      padding: 160px 12.5% 0;
+    }
+
+    @include breakpoint(md) {
+      margin: 0 auto 50px;
+      padding: 160px 10% 0;
+    }
+
+    @include breakpoint(xs) {
+      padding: 120px 20px 0;
+    }
+  }
+
+  &__navigation-list {
+    @media (min-width: 1921px) {
+      @include text-style(3.75em, 900, 60px, normal, false, false);
+    }
+
+    @media (max-width: 1920px) {
+      @include text-style(3.1vw, 900, 3.1vw, normal, false, false);
+    }
+
+    @include breakpoint(md) {
+      font-size: 2.5rem;
+      line-height: 40px;
+    }
+
+    @include breakpoint(sm) {
+      font-size: 2rem;
+      line-height: 35px;
+    }
+
+    @include breakpoint(xs) {
+      font-size: 1.5rem;
+      line-height: 28px;
+    }
+  }
+
+  &__navigation-list-item {
+    &:not(:last-child) {
+      margin: 0 0 27px;
+
+      @include breakpoint(sm) {
+        margin: 0 0 24px;
+      }
+
+      @include breakpoint(xs) {
+        margin: 0 0 20px;
+      }
+    }
+  }
+
+  &__navigation-link {
+    position: relative;
+    display: inline-block;
+    color: transparent;
+
+    &:hover {
+      span {
+        color: $primary;
+      }
+    }
+
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      color: $white;
+      transition: color 0.3s ease-out;
+    }
+  }
+
+  &__copyright {
+    @include text-style(0.75em, 200, 16px, normal, false, 0.75px);
+
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 12.5% 40px;
+
+    @include breakpoint(md) {
+      padding: 0 10% 40px;
+    }
+
+    @include breakpoint(xs) {
+      flex-direction: column;
+      padding: 0 20px 40px;
+    }
+  }
+
+  &__only {
+    font-weight: 900;
+
+    @include breakpoint(xs) {
+      display: inline-block;
+      margin: 0 0 10px;
+    }
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+
+  .ps__rail-y {
+    background-color: transparent;
+  }
+
+  .ps__thumb-y {
+    background-color: $secondary;
+  }
+}
