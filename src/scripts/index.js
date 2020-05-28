@@ -19,7 +19,7 @@ import animationsIndexPage from "./pages/index/animations";
 
     logics() {
       new Header();
-      new Menu();
+      // new Menu();
     }
   }
 
